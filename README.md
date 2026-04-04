@@ -1,3 +1,3 @@
-# Welcome to my personal website
+# Personal website source code
 
-Under construction...
+This is the source code for the GitHub IO personal website.
