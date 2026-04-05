@@ -12,8 +12,8 @@ const Footer = () => {
           Don't look up! 
         </p>
         <div className="flex justify-center gap-6 text-sm text-muted-foreground">
-          <a href="#academics" className="hover:text-primary transition-colors">Research</a>
-          <a href="#projects" className="hover:text-primary transition-colors">Other Ventures</a>
+          <a href="/#academics" className="hover:text-primary transition-colors">Research</a>
+          <a href="/#projects" className="hover:text-primary transition-colors">Other Ventures</a>
         </div>
         <p className="text-xs text-muted-foreground mt-8">
           © {new Date().getFullYear()} Celeste Lu

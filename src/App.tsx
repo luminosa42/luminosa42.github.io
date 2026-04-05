@@ -5,6 +5,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import MathAndDataSciencePage from "./pages/interests/MathAndDataSciencePage.tsx";
+import WritingPage from "./pages/interests/WritingPage.tsx";
+import MentoringPage from "./pages/interests/MentoringPage.tsx";
+import ArtAndDesignPage from "./pages/interests/ArtAndDesignPage.tsx";
+import BlackHolePhysicsPage from "./pages/research/BlackHolePhysicsPage.tsx";
+import HpcAiAstronomyPage from "./pages/research/HpcAiAstronomyPage.tsx";
+import RadioInterferometryPage from "./pages/research/RadioInterferometryPage.tsx";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +23,13 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/interests/math-and-data-science" element={<MathAndDataSciencePage />} />
+          <Route path="/interests/writing" element={<WritingPage />} />
+          <Route path="/interests/mentoring-and-coaching" element={<MentoringPage />} />
+          <Route path="/interests/art-and-design" element={<ArtAndDesignPage />} />
+          <Route path="/research/black-hole-physics" element={<BlackHolePhysicsPage />} />
+          <Route path="/research/hpc-ai-in-astronomy" element={<HpcAiAstronomyPage />} />
+          <Route path="/research/radio-interferometry" element={<RadioInterferometryPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

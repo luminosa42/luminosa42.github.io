@@ -1,4 +1,7 @@
-import { Moon, Globe, Sparkles } from "lucide-react";
+import { Moon } from "lucide-react";
+import { Link } from "react-router-dom";
+import { researchTopics } from "@/data/researchTopics";
+import { pageAccentIconBox } from "@/theme/pageAccent";
 
 const AboutSection = () => {
   return (
@@ -26,20 +29,27 @@ const AboutSection = () => {
           </div>
 
           <div className="space-y-4">
-            {[
-              { icon: Globe, label: "Black Hole Physics", desc: "Accretion disk, jets and AGN feedback" },
-              { icon: Sparkles, label: "HPC/AI in Astronomy", desc: "Computational tools to simulate and analyse astronomical data" },
-              { icon: Moon, label: "Radio Interferometry", desc: "Observing high energy phenomena" },
-            ].map(({ icon: Icon, label, desc }) => (
-              <div key={label} className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border card-glow hover:border-primary/30 transition-colors">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <Icon className="w-5 h-5 text-primary" />
+            {researchTopics.map(({ icon: Icon, label, desc, path, color, accent }) => (
+              <Link
+                key={label}
+                to={path}
+                className="group flex items-start gap-4 p-4 rounded-xl bg-card border border-border card-glow hover:border-primary/30 transition-all duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                <div
+                  className={`p-3 rounded-xl shrink-0 transition-colors ${pageAccentIconBox[accent]}`}
+                >
+                  <Icon className={`w-10 h-10 md:w-12 md:h-12 ${color}`} strokeWidth={1.25} />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground font-heading">{label}</h3>
-                  <p className="text-sm text-muted-foreground">{desc}</p>
+                <div className="min-w-0 flex-1 pt-0.5">
+                  <h3 className="font-semibold text-foreground font-heading group-hover:text-primary transition-colors">
+                    {label}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{desc}</p>
+                  <span className="mt-2 inline-block text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                    Read more →
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

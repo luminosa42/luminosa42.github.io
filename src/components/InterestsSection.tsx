@@ -1,31 +1,6 @@
-import { Orbit, Camera, BookOpen, Cpu } from "lucide-react";
-
-const interests = [
-  {
-    icon: Cpu,
-    title: "Math & Data Science",
-    description: "From interesting geometry problems to practical LLM applications",
-    color: "text-primary",
-  },
-  {
-    icon: BookOpen,
-    title: "Writing",
-    description: "Short stories, poetry, plays, and essays on a variety of topics",
-    color: "text-starlight",
-  },
-  {
-    icon: Orbit,
-    title: "Mentoring & Coaching",
-    description: "Navigating life through scientific and logical lens",
-    color: "text-nebula",
-  },
-  {
-    icon: Camera,
-    title: "Art & Design",
-    description: "A portfolio for science-inspired art and design projects",
-    color: "text-primary",
-  },
-];
+import { Link } from "react-router-dom";
+import { interests } from "@/data/interests";
+import { pageAccentIconBox } from "@/theme/pageAccent";
 
 const InterestsSection = () => {
   return (
@@ -39,17 +14,25 @@ const InterestsSection = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6">
-          {interests.map(({ icon: Icon, title, description, color }) => (
-            <div
+          {interests.map(({ icon: Icon, title, description, color, path, accent }) => (
+            <Link
               key={title}
-              className="group p-6 rounded-2xl bg-card border border-border card-glow hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
+              to={path}
+              className="group block p-6 rounded-2xl bg-card border border-border card-glow hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              <div className="p-3 rounded-xl bg-primary/10 w-fit mb-4 group-hover:bg-primary/20 transition-colors">
-                <Icon className={`w-6 h-6 ${color}`} />
+              <div
+                className={`p-4 rounded-2xl w-fit mb-5 transition-colors ${pageAccentIconBox[accent]}`}
+              >
+                <Icon className={`w-12 h-12 md:w-14 md:h-14 ${color}`} strokeWidth={1.25} />
               </div>
-              <h3 className="text-xl font-semibold font-heading text-foreground mb-2">{title}</h3>
+              <h3 className="text-xl font-semibold font-heading text-foreground mb-2 group-hover:text-primary transition-colors">
+                {title}
+              </h3>
               <p className="text-muted-foreground leading-relaxed">{description}</p>
-            </div>
+              <span className="mt-4 inline-block text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                Explore →
+              </span>
+            </Link>
           ))}
         </div>
       </div>
