@@ -28,16 +28,16 @@ const AboutSection = () => {
             </p>
             <div className="pt-2 flex flex-wrap gap-3">
               <Link
-                to="/research/curriculum-vitae"
+                to="/research/academic-cv"
                 className="inline-flex items-center px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >
-                Curriculum Vitae
+                Academic CV
               </Link>
               <Link
-                to="/research/publications"
+                to="/research/tech-stack"
                 className="inline-flex items-center px-4 py-2 rounded-lg border border-primary/30 text-foreground text-sm font-medium hover:bg-primary/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >
-                Publications
+                Tech Stack
               </Link>
               <Link
                 to="/research/ongoing-projects"

@@ -24,7 +24,7 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold font-heading mb-6 text-glow animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
-          <span className="text-foreground">Celeste Lu</span>
+          <span className="text-foreground">Ying-He Celeste Lü</span>
           <br />
           <span className="text-primary">Astrophysicist, Educator, Lifelong Learner</span>
         </h1>

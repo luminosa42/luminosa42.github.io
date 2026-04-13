@@ -7,7 +7,6 @@ export const researchSectionBackLink = {
 } as const;
 
 export type ResearchTopicItem = {
-  path: string;
   icon: LucideIcon;
   label: string;
   desc: string;
@@ -17,7 +16,6 @@ export type ResearchTopicItem = {
 
 export const researchTopics: ResearchTopicItem[] = [
   {
-    path: "/research/black-hole-physics",
     icon: Globe,
     label: "Black Hole Physics",
     desc: "Accretion disk, jets and AGN feedback",
@@ -25,7 +23,6 @@ export const researchTopics: ResearchTopicItem[] = [
     accent: "primary",
   },
   {
-    path: "/research/hpc-ai-in-astronomy",
     icon: Sparkles,
     label: "HPC/AI in Astronomy",
     desc: "Computational tools to simulate and analyse astronomical data",
@@ -33,10 +30,9 @@ export const researchTopics: ResearchTopicItem[] = [
     accent: "nebula",
   },
   {
-    path: "/research/radio-interferometry",
     icon: Moon,
     label: "Radio Interferometry",
-    desc: "Observing high energy phenomena",
+    desc: "Observing high energy astrophysical phenomena through radio waves",
     color: "text-starlight",
     accent: "starlight",
   },

@@ -9,11 +9,8 @@ import MathAndDataSciencePage from "./pages/interests/MathAndDataSciencePage.tsx
 import WritingPage from "./pages/interests/WritingPage.tsx";
 import MentoringPage from "./pages/interests/MentoringPage.tsx";
 import ArtAndDesignPage from "./pages/interests/ArtAndDesignPage.tsx";
-import BlackHolePhysicsPage from "./pages/research/BlackHolePhysicsPage.tsx";
-import HpcAiAstronomyPage from "./pages/research/HpcAiAstronomyPage.tsx";
-import RadioInterferometryPage from "./pages/research/RadioInterferometryPage.tsx";
 import CurriculumVitaePage from "./pages/research/CurriculumVitaePage.tsx";
-import PublicationsPage from "./pages/research/PublicationsPage.tsx";
+import TechnicalStackPage from "./pages/research/TechnicalStackPage.tsx";
 import OngoingProjectsPage from "./pages/research/OngoingProjectsPage.tsx";
 
 const queryClient = new QueryClient();
@@ -30,11 +27,8 @@ const App = () => (
           <Route path="/interests/writing" element={<WritingPage />} />
           <Route path="/interests/mentoring-and-coaching" element={<MentoringPage />} />
           <Route path="/interests/art-and-design" element={<ArtAndDesignPage />} />
-          <Route path="/research/black-hole-physics" element={<BlackHolePhysicsPage />} />
-          <Route path="/research/hpc-ai-in-astronomy" element={<HpcAiAstronomyPage />} />
-          <Route path="/research/radio-interferometry" element={<RadioInterferometryPage />} />
-          <Route path="/research/curriculum-vitae" element={<CurriculumVitaePage />} />
-          <Route path="/research/publications" element={<PublicationsPage />} />
+          <Route path="/research/academic-cv" element={<CurriculumVitaePage />} />
+          <Route path="/research/tech-stack" element={<TechnicalStackPage />} />
           <Route path="/research/ongoing-projects" element={<OngoingProjectsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
