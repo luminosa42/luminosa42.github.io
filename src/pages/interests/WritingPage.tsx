@@ -1,5 +1,6 @@
 import { BookOpen } from "lucide-react";
 import InterestPageShell from "@/components/InterestPageShell";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const WritingPage = () => {
   return (
@@ -7,13 +8,23 @@ const WritingPage = () => {
       icon={BookOpen}
       eyebrow="Other Ventures"
       title="Writing"
-      intro="Short stories, poetry, plays, and essays on a variety of topics"
+      intro="A collection of my written works and links"
       accent="starlight"
     >
-      <p>To be updated.</p>
-      <p className="text-sm border-l-2 border-starlight/40 pl-4 italic text-muted-foreground/90">
-        More content will be added soon.
-      </p>
+      <div className="grid gap-6 md:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Blog posts</CardTitle>
+            <CardDescription>More content will be added soon</CardDescription>
+          </CardHeader>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Published articles</CardTitle>
+            <CardDescription>More content will be added soon</CardDescription>
+          </CardHeader>
+        </Card>
+      </div>
     </InterestPageShell>
   );
 };

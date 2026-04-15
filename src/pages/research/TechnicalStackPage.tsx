@@ -92,11 +92,6 @@ const TechnicalStackPage = () => {
           assistants to speed up research, coding, and technical writing workflows.
         </li>
         <li className="rounded-lg border border-nebula/25 bg-nebula/5 px-4 py-3 leading-relaxed">
-          <strong className="text-foreground">Tool Proficiency:</strong> Hands-on experience with
-          OpenAI, Claude Code, GitHub Copilot, and Cursor for iterative prototyping, debugging,
-          and documentation tasks.
-        </li>
-        <li className="rounded-lg border border-nebula/25 bg-nebula/5 px-4 py-3 leading-relaxed">
           <strong className="text-foreground">Quality & Oversight:</strong> Strong focus on prompt
           design, validation, and human review to ensure reliable, high-quality outputs.
         </li>
